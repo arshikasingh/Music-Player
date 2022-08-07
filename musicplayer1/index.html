@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>music player</title>
+</head>
+<body>
+<!--Linking the css files-->
+<link rel = "stylesheet" href = "assests/css/style.css">
+<!-- Link use the below to use font-awesome icons -->
+<script src="https://kit.fontawesome.com/07fcf237ab.js" crossorigin="anonymous"></script>
+<div class = "main-container">
+	<header class  = "header">
+	 <div class = "logo">
+	   <img src = "leap.png" height = "10vh"> 
+	   <p class = "fav">Favourites</p>
+	</div>
+	<div class = "searchbox-container">
+		<div class = "search-box">
+			<i class="fa-solid fa-magnifying-glass"></i>
+			<input type = "text" placeholder="Search">
+			<i class="fa-solid fa-microphone"></i>
+		</div>
+		<div class = "bell">
+		<i class="fa-solid fa-bell"></i>
+	</div>
+	
+		<img class = "profile-photo" src = "assests/images/profilepic.jpg">
+	</div>
+</header>
+<!-- use for slider five photos -->
+ <div class = "for-responsiveness">
+ 	<main>
+ 		<div class = "bollywood">
+ 			<div id = "slider">
+ 			<input type = "radio" name = "slider" id = "s1" checked>
+ 			<input type = "radio" name = "slider" id = "s2">
+ 			<input type = "radio" name = "slider" id = "s3">
+ 			<input type = "radio" name = "slider" id = "s4">
+ 			<input type = "radio" name = "slider" id = "s5">
+ 			<label for = "s1" id = "slide1"><img src = "assests/bollywood/image1.png"></label>
+ 			<label for = "s2" id = "slide2"><img src = "assests/bollywood/image2.jpg"></label>
+ 			<label for = "s3" id = "slide3"><img src = "assests/bollywood/image3.jpg"></label>
+ 			<label for = "s4" id = "slide4"><img src = "assests/bollywood/image4.jpg"></label>
+ 			<label for = "s5" id = "slide5"><img src = "assests/bollywood/image5.png"></label>
+ 		</div>
+ 	</div>
+ 	<div id = "queue-1" class = "queue-container">
+ 		<div class = "queue-header">
+ 			<p>Queue</p>
+ 			<div class = "queue-btn-container">
+ 				<!-- here all label element is acting as button for dropdown effect -->
+ 				<label for = "mycheckbox">Queue<span><i class="fa-solid fa-caret-down"></i></span></label>
+ 				<input type = "checkbox" id = "mycheckbox">
+ 				<div class = "queue-btn-dropdown">
+ 					<a href = "">Playlists</a>
+ 					<hr>
+ 					<a href = "">Favourites Songs</a>
+ 				</div>
+ 			</div>
+ 		</div>
+ 		<div class = "queue-elements-container">
+ 			<div class ="queue-element">
+ 				<div class = "song-image-container">
+ 					<p class = "queue-number">01</p>
+ 					<div class = "image-container">
+ 						<img class = "queue-song-img" src =  "assests/queue/Qimage1.jpg">
+ 						<i class="fa-solid play-btn fa-play"></i>
+ 					</div>
+ 					<div class = "song-and-artist-container">
+ 						<p class = "queue-song-name">Kabhi alvida na kehna</p>
+ 						<p class = "queue-artist-name">Sonu Nigam</p>
+ 					</div>
+ 				</div>
+ 				<i class="fa-light fa-heart"></i>
+ 			</div>
+ 			<div class = "queue-element">
+ 				<div class = "song-image-container">
+ 					<!-- <p class = "queue-number">02</p> -->
+ 					<i class="fa-solid fa-bars-staggered"></i>
+ 					<div class = "image-container">
+ 						<img class = "queue-song-img" src = "assests/queue/Qimage2.jpg">
+ 						<i class="fa-solid play-btn fa-play"></i>
+ 					</div>
+ 					<div class = "song-and-artist-container">
+ 						<p class = "queue-song-name">O khuda</p>
+ 						<p class = "queue-artist-name">Amaal Malik</p>
+ 					</div>
+ 				</div>
+ 				<i class="fa-light fa-heart"></i>
+ 			</div>
+ 			<div class ="queue-element">
+ 				<div class = "song-image-container">
+ 					<p class = "queue-number">03</p>
+ 					<div class = "image-container">
+ 						<img class = "queue-song-img" src =  "assests/queue/Qimage3.jpg">
+ 						<i class="fa-solid play-btn fa-play"></i>
+ 					</div>
+ 					<div class = "song-and-artist-container">
+ 						<p class = "queue-song-name">Galat Fehmi</p>
+ 						<p class = "queue-artist-name">Asim Azhar</p>
+ 					</div>
+ 				</div>
+ 				<i class="fa-light fa-heart"></i>
+ 			</div>
+ 			<div class ="queue-element">
+ 				<div class = "song-image-container">
+ 					<p class = "queue-number">04</p>
+ 					<div class = "image-container">
+ 						<img class = "queue-song-img" src =  "assests/queue/Qimage4.jpg">
+ 						<i class="fa-solid play-btn fa-play"></i>
+ 					</div>
+ 					<div class = "song-and-artist-container">
+ 						<p class = "queue-song-name">Malang</p>
+ 						<p class = "queue-artist-name">Ved Sharma</p>
+ 					</div>
+ 				</div>
+ 				<i class="fa-light fa-heart"></i>
+ 			</div>
+ 			<div class ="queue-element">
+ 				<div class = "song-image-container">
+ 					<p class = "queue-number">05</p>
+ 					<div class = "image-container">
+ 						<img class = "queue-song-img" src =  "assests/queue/Qimage5.jpg">
+ 						<i class="fa-solid play-btn fa-play"></i>
+ 					</div>
+ 					<div class = "song-and-artist-container">
+ 						<p class = "queue-song-name">Kuch toh hai</p>
+ 						<p class = "queue-artist-name">Armaan Malik</p>
+ 					</div>
+ 				</div>
+ 				<i class="fa-light fa-heart"></i>
+ 			</div>
+ 			<div class ="queue-element">
+ 				<div class = "song-image-container">
+ 					<p class = "queue-number">06</p>
+ 					<div class = "image-container">
+ 						<img class = "queue-song-img" src =  "assests/queue/Qimage6.jpg">
+ 						<i class="fa-solid play-btn fa-play"></i>
+ 					</div>
+ 					<div class = "song-and-artist-container">
+ 						<p class = "queue-song-name">Judaai</p>
+ 						<p class = "queue-artist-name">Arijit Singh</p>
+ 					</div>
+ 				</div>
+ 				<i class="fa-light fa-heart"></i>
+ 			</div>
+ 			<div class ="queue-element">
+ 				<div class = "song-image-container">
+ 					<p class = "queue-number">07</p>
+ 					<div class = "image-container">
+ 						<img class = "queue-song-img" src =  "assests/queue/Qimage7.jpg">
+ 						<i class="fa-solid play-btn fa-play"></i>
+ 					</div>
+ 					<div class = "song-and-artist-container">
+ 						<p class = "queue-song-name">Tu hai ki nahi</p>
+ 						<p class = "queue-artist-name">Ankit tiwari</p>
+ 					</div>
+ 				</div>
+ 				<i class="fa-light fa-heart"></i>
+ 			</div>
+ 			<div class ="queue-element">
+ 				<div class = "song-image-container">
+ 					<p class = "queue-number">08</p>
+ 					<div class = "image-container">
+ 						<img class = "queue-song-img" src =  "assests/queue/Qimage8.jpg">
+ 						<i class="fa-solid play-btn fa-play"></i>
+ 					</div>
+ 					<div class = "song-and-artist-container">
+ 						<p class = "queue-song-name">Kaash aisa hota hai</p>
+ 						<p class = "queue-artist-name">Darshan Rawal</p>
+ 					</div>
+ 				</div>
+ 				<i class="fa-light fa-heart"></i>
+ 			</div>
+ 			<div class ="queue-element">
+ 				<div class = "song-image-container">
+ 					<p class = "queue-number">09</p>
+ 					<div class = "image-container">
+ 						<img class = "queue-song-img" src =  "assests/queue/Qimage9.jpg">
+ 						<i class="fa-solid play-btn fa-play"></i>
+ 					</div>
+ 					<div class = "song-and-artist-container">
+ 						<p class = "queue-song-name">Baarish lete aana</p>
+ 						<p class = "queue-artist-name">Darshan Rawal</p>
+ 					</div>
+ 				</div>
+ 				<i class="fa-light fa-heart"></i>
+ 			</div>
+ 			<div class ="queue-element">
+ 				<div class = "song-image-container">
+ 					<p class = "queue-number">10</p>
+ 					<div class = "image-container">
+ 						<img class = "queue-song-img" src =  "assests/queue/Qimage10.jpg">
+ 						<i class="fa-solid play-btn fa-play"></i>
+ 					</div>
+ 					<div class = "song-and-artist-container">
+ 						<p class = "queue-song-name">Baari</p>
+ 						<p class = "queue-artist-name">Bilal Saeed</p>
+ 					</div>
+ 				</div>
+ 				<i class="fa-light fa-heart"></i>
+ 			</div>
+ 			<div class ="queue-element">
+ 				<div class = "song-image-container">
+ 					<p class = "queue-number">11</p>
+ 					<div class = "image-container">
+ 						<img class = "queue-song-img" src =  "assests/queue/Qimage11.jpg">
+ 						<i class="fa-solid play-btn fa-play"></i>
+ 					</div>
+ 					<div class = "song-and-artist-container">
+ 						<p class = "queue-song-name">Mar Jaayein</p>
+ 						<p class = "queue-artist-name">Atif Aslam</p>
+ 					</div>
+ 				</div>
+ 				<i class="fa-light fa-heart"></i>
+ 			</div>
+ 			<!-- <div class ="queue-element">
+ 				<div class = "song-image-container">
+ 					<p class = "queue-number">12</p>
+ 					<div class = "image-container">
+ 						<img class = "queue-song-img" src =  "assests/queue/Qimage1.jpg">
+ 						<i class="fa-solid fa-play"></i>
+ 					</div>
+ 					<div class = "song-and-artist-container">
+ 						<p class = "queue-song-name">dariya</p>
+ 						<p class = "queue-artist-name">Arko Pravo Mukherjee</p>
+ 					</div>
+ 				</div>
+ 				<i class="fa-light fa-heart"></i>
+ 			</div> -->
+ 		</div>
+ 	</div>
+ 	<div class = "latest-release-container">
+ 		<div class = "latest-release-header">
+ 			<p>Latest Release</p>
+ 		</div>
+ 		<div class = "latest-release-cards-container">
+ 			<div class = "latest-release-card">
+ 				<div class ="song-name-and-img-container">
+ 					<div class = "latest-release-img-container">
+ 						<!-- yahan ka meko smajh nahi aya -->
+ 						<label for = "play-btn-checkbox1"><i class="fa-solid fa-play latest-release-play-btn play-1"></i><i class="fa-solid fa-pause"></i></label>
+ 					</div>
+ 				<div>
+ 					<p class = "song-name">Pasoori</p>
+ 					<p class = "date">June 1, 2022</p>
+ 				</div>
+ 			</div>
+ 			<div class = "latest-release-dropdown-container">
+ 				<label for = "latest-release-checkbox1"><i class="fa-solid fa-ellipsis more-details"></i></label>
+ 				<input type = "checkbox" id = "latest-release-checkbox1">
+ 				<div class = "latest-release-dropdown">
+ 					<div class = "links-container">
+ 						<i class="fa-solid fa-play"></i>
+ 						<a href = "">Play Now</a>
+ 					</div>
+ 					<hr>
+ 					<div class = "links-container">
+ 						<i class="fa-solid fa-plus"></i>
+ 						<a href = "">add To Queue</a>
+ 					</div>
+ 					<hr>
+ 					<div class = "links-container">
+ 						<i class="fa-solid fa-bars"></i>
+ 						<a href = "">Add to favourites</a>
+ 						</div>
+ 						<hr>
+ 						<div class = "links-container">
+ 						<i class="fa-solid fa-circle-exclamation"></i>
+ 						<a href = ""><span></span>get Info</a>
+ 						</div> 
+ 					</div>
+ 					<p class = "time">12:00</p>
+ 				</div>
+ 			</div>
+ 			<div class = "latest-release-card">
+ 				<div class = "song-name-and-img-container">
+ 				<div class = "latest-release-img-container">
+ 					<label for = "play-btn-checkbox2"><i class="fa-solid fa-play latest-release-play-btn play-2"></i><i class="fa-solid fa-pause"></i></label>
+ 				</div>
+ 				<div>
+ 					<p class = "song-name">Pasoori</p>
+ 					<p class = "date">June 1, 2022</p>
+ 					</div>
+ 				</div>
+ 				<div class = "latest-release-dropdown-container">
+ 				<label for = "latest-release-checkbox2"><i class="fa-solid fa-ellipsis more-details"></i></label>
+ 				<input type = "checkbox" id = "latest-release-checkbox2">
+ 				<div class = "latest-release-dropdown">
+ 					<div class = "links-container">
+ 						<i class="fa-solid fa-play"></i>
+ 						<a href = "">Play Now</a>
+ 					</div>
+ 					<hr>
+ 					<div class = "links-container">
+ 						<i class="fa-solid fa-plus"></i>
+ 						<a href = "">add To Queue</a>
+ 					</div>
+ 					<hr>
+ 					<div class = "links-container">
+ 						<i class="fa-solid fa-bars"></i>
+ 						<a href = "">Add to favourites</a>
+ 						</div>
+ 						<hr>
+ 						<div class = "links-container">
+ 						<i class="fa-solid fa-circle-exclamation"></i>
+ 						<a href = ""><span></span>get Info</a>
+ 						</div> 
+ 					</div>
+ 					<p class = "time">12:00</p>
+ 				</div>
+ 			</div>
+ 		</div>
+ 		<div class = "latest-release-cards-container">
+ 			<div class = "latest-release-card">
+ 				<div class ="song-name-and-img-container">
+ 					<div class = "latest-release-img-container">
+ 						
+ 						<label for = "play-btn-checkbox3"><i class="fa-solid fa-play latest-release-play-btn play-3"></i><i class="fa-solid fa-pause"></i></label>
+ 					</div>
+ 					<div>
+ 					<p class = "song-name">Pasoori</p>
+ 					<p class = "date">June 1, 2022</p>
+ 				</div>
+ 			</div>
+ 			<div class = "latest-release-dropdown-container">
+ 				<label for = "latest-release-checkbox3"><i class="fa-solid fa-ellipsis more-details"></i></label>
+ 				<input type = "checkbox" id = "latest-release-checkbox3">
+ 				<div class = "latest-release-dropdown">
+ 					<div class = "links-container">
+ 						<i class="fa-solid fa-play"></i>
+ 						<a href = "">Play Now</a>
+ 					</div>
+ 					<hr>
+ 					<div class = "links-container">
+ 						<i class="fa-solid fa-plus"></i>
+ 						<a href = "">add To Queue</a>
+ 					</div>
+ 					<hr>
+ 					<div class = "links-container">
+ 						<i class="fa-solid fa-bars"></i>
+ 						<a href = "">Add to favourites</a>
+ 						</div>
+ 						<hr>
+ 						<div class = "links-container">
+ 						<i class="fa-solid fa-circle-exclamation"></i>
+ 						<a href = ""><span></span>get Info</a>
+ 						</div> 
+ 					</div>
+ 					<p class = "time">12:00</p>
+ 				</div>
+ 			</div>
+ 			<div class = "latest-release-card">
+ 				<div class = "song-name-and-img-container">
+ 				<div class = "latest-release-img-container">
+ 					<label for = "play-btn-checkbox4"><i class="fa-solid fa-play latest-release-play-btn play-4"></i><i class="fa-solid fa-pause"></i></label>
+ 				</div>
+ 				<div>
+ 					<p class = "song-name">Pasoori</p>
+ 					<p class = "date">June 1, 2022</p>
+ 					</div>
+ 				</div>
+ 				<div class = "latest-release-dropdown-container">
+ 				<label for = "latest-release-checkbox4"><i class="fa-solid fa-ellipsis more-details"></i></label>
+ 				<input type = "checkbox" id = "latest-release-checkbox4">
+ 				<div class = "latest-release-dropdown">
+ 					<div class = "links-container">
+ 						<i class="fa-solid fa-play"></i>
+ 						<a href = "">Play Now</a>
+ 					</div>
+ 					<hr>
+ 					<div class = "links-container">
+ 						<i class="fa-solid fa-plus"></i>
+ 						<a href = "">add To Queue</a>
+ 					</div>
+ 					<hr>
+ 					<div class = "links-container">
+ 						<i class="fa-solid fa-bars"></i>
+ 						<a href = "">Add to favourites</a>
+ 						</div>
+ 						<hr>
+ 						<div class = "links-container">
+ 						<i class="fa-solid fa-circle-exclamation"></i>
+ 						<a href = ""><span></span>get Info</a>
+ 						</div> 
+ 					</div>
+ 					<p class = "time">12:00</p>
+ 				</div>
+ 			</div>
+ 		</div>
+</div>
+ 		
+ 		<div class = "popular-artists-container">
+ 			<div class = "popular-artist-header">
+ 				<p>Popular Artists</p>
+ 			</div>
+ 			<div class = "popular-artists-img-container">
+ 			<div class = "popular-artists-1-container">
+ 				<div class = "popular-artists-img1-container">
+ 					<div class = "popular-artists">
+ 						<a href = ""><i class="fa-solid fa-play popular-artists-play-btn"></i></a>
+ 					</div>
+ 				</div>
+ 				<p>Arijit Singh</p>
+ 			</div>
+ 			<div class = "popular-artists-1-container">
+ 				<div class = "popular-artists-img1-container">
+ 					<div class = "popular-artists popular-artists-2">
+ 						<a href = ""><i class="fa-solid fa-play popular-artists-play-btn"></i></a>
+ 					</div>
+ 				</div>
+ 				<p>A R Rahman</p>
+ 			</div>
+ 			<div class = "popular-artists-1-container">
+ 				<div class = "popular-artists-img1-container">
+ 					<div class = "popular-artists popular-artists-3">
+ 						<a href = ""><i class="fa-solid fa-play popular-artists-play-btn"></i></a>
+ 					</div>
+ 				</div>
+ 				<p>Shreya Ghoshal</p>
+ 			</div>
+ 			<div class = "popular-artists-1-container">
+ 				<div class = "popular-artists-img1-container">
+ 					<div class = "popular-artists popular-artists-4">
+ 						<a href = ""><i class="fa-solid fa-play popular-artists-play-btn"></i></a>
+ 					</div>
+ 				</div>
+ 				<p>Neha Kakkar</p>
+ 			</div>
+ 			<div class = "popular-artists-1-container">
+ 				<div class = "popular-artists-img1-container">
+ 					<div class = "popular-artists popular-artists-5">
+ 						<a href = ""><i class="fa-solid fa-play popular-artists-play-btn"></i></a>
+ 					</div>
+ 				</div>
+ 				<p>Shekhar</p>
+ 			</div>
+ 			<div class = "popular-artists-1-container">
+ 				<div class = "popular-artists-img1-container">
+ 					<div class = "popular-artists popular-artists-6">
+ 						<a href = ""><i class="fa-solid fa-play popular-artists-play-btn"></i></a>
+ 					</div>
+ 				</div>
+ 				<p>Ed Sheeran</p>
+ 			</div>
+ 		</div>
+ 	</div>
+ 	<!-- <div class = "stations-container">
+ 		<div class = "stations-logo-conatiner">
+ 			<div class = "stations-logo-img-container">
+ 			</div>
+ 		</div>
+ 		<div class = "stations-img-container">
+ 			<div class = "stations-img">
+ 				<div class = "img-1">
+ 				</div>
+ 			</div>
+ 			<p class = "stations-para">Love</p>
+ 		</div>
+ 		<div class = "stations-img-container">
+ 			<div class = "stations-img">
+ 				<div class = "img-1 img-2">
+ 				</div>
+ 			</div>
+ 			<p class = "stations-para">Retro</p>
+ 		</div>
+ 		<div class = "stations-img-container">
+ 			<div class = "stations-img">
+ 				<div class = "img-1 img-3">
+ 				</div>
+ 			</div>
+ 			<p class = "stations-para">Chill</p>
+ 		</div>
+ 		<div class = "stations-img-container">
+ 			<div class = "stations-img">
+ 				<div class = "img-1 img-4">
+ 				</div>
+ 			</div>
+ 			<p class = "stations-para">Workout</p>
+ 		</div>
+ 		<div class = "stations-img-container">
+ 			<div class = "stations-img">
+ 				<div class = "img-5">
+ 				</div>
+ 			</div>
+ 			<p class = "stations-para">Rock</p>
+ 		</div>
+ 		<div class = "stations-img-container">
+ 			<div class = "stations-img">
+ 				<div class = "img-1 img-6">
+ 				</div>
+ 			</div>
+ 			<p class = "stations-para">Pop</p>
+ 		</div>
+ 	</div> -->
+ 	<div class = "genre-container">
+ 		<div class = "genre-img-container">
+ 			<p>Party</p>
+ 		</div>
+ 		<div class = "genre-img-container genre-img-2">
+ 			<p>Electronic</p>
+ 		</div>
+ 		<div class = "genre-img-container genre-img-3">
+ 			<p>Road Trip</p>
+ 		</div>
+ 	</div>
+ 	<div class = "latest-english-container">
+ 		<div class = "latest-english-header">
+ 			<p>Latest English</p>
+ 		</div>
+ 		<div class = "latest-english-content">
+ 			<div class = "latest-english-card-container">
+ 				<img src = "songs/tumhihoimage1.jpg">
+ 				<p>Tum hi ho</p>
+ 				<p>Jan, 2017</p>
+ 			</div>
+ 			<div class = "latest-english-card-container">
+ 				<img src = "songs/agartumsathhoimage2.jpg">
+ 				<p>Agar Tum Sath Ho</p>
+ 				<p>Feb, 2019</p>
+ 			</div>
+ 			<div class = "latest-english-card-container">
+ 				<img src = "songs/kesariyaimage3.jpg">
+ 				<p>Kesariya</p>
+ 				<p>July, 2022</p>
+ 			</div>
+ 			<div class = "latest-english-card-container">
+ 				<img src = "songs/justgotohellimage4.jpg">
+ 				<p>Just go to hell</p>
+ 				<p>march, 2018</p>
+ 			</div>
+ 			<div class = "latest-english-card-container">
+ 				<img src = "songs/ishqbhiimage5.jpg">
+ 				<p>ishq Bhi kiya Re</p>
+ 				<p>april, 2015</p>
+ 			</div>
+ 			<div class = "latest-english-card-container">
+ 				<img src = "songs/dilroyijayeimage6.jpg">
+ 				<p>Dil Royi jaye</p>
+ 				<p>August, 2021</p>
+ 			</div>
+ 		</div>
+ 	</div>
+ 	<!-- latest hindi container -->
+ 	<div class = "latest-english-container">
+ 		<div class = "latest-english-header">
+ 			<p>Latest Hindi</p>
+ 		</div>
+ 		<div class = "latest-english-content">
+ 		<div class = "latest-english-card-container">
+ 			<img src = "songs/queue-02.jpg">
+ 			<p>Onism</p>
+ 			<p>Aug 11, 2017</p>
+ 		</div>
+ 		<div class = "latest-english-card-container">
+ 			<img src = "songs/queue-03.png">
+ 			<p>Onism</p>
+ 			<p>Aug 11, 2017</p>
+ 		</div>
+ 		<div class = "latest-english-card-container">
+ 			<img src = "songs/tumhihoimage1.jpg">
+ 			<p>Tum hi ho</p>
+ 			<p>Aug 11, 2017</p>
+ 		</div>
+ 		<div class = "latest-english-card-container">
+ 			<img src = "songs/agartumsathhoimage2.jpg">
+ 			<p>Agar tum sath ho</p>
+ 			<p>Aug 11, 2017</p>
+ 		</div>
+ 		<div class = "latest-english-card-container">
+ 			<img src = "songs/queue-02.jpg">
+ 			<p>Onism</p>
+ 			<p>Aug 11, 2017</p>
+ 		</div>
+ 		<div class = "latest-english-card-container">
+ 			<img src = "songs/queue-03.png">
+ 			<p>Onism</p>
+ 			<p>Aug 11, 2017</p>
+ 		</div>
+ 	</div>
+ </div>
+</main>
+ 	<div id = "queue-2" class = "queue-container">
+ 		<div class = "queue-header">
+ 			<p>Queue</p>
+ 			<div class = "queue-btn-container">
+ 				<!-- here all label element is acting as button for dropdown effect -->
+ 				<label for = "mycheckbox">Queue<span><i class="fa-solid fa-caret-down"></i></span></label>
+ 				<input type = "checkbox" id = "mycheckbox">
+ 				<div class = "queue-btn-dropdown">
+ 					<a href = "">Playlists</a>
+ 					<hr>
+ 					<a href = "">Favourites Songs</a>
+ 				</div>
+ 			</div>
+ 		</div>
+ 		<div class = "queue-elements-container">
+ 			<div class ="queue-element">
+ 				<div class = "song-image-container">
+ 					<p class = "queue-number">01</p>
+ 					<div class = "image-container">
+ 						<img class = "queue-song-img" src =  "assests/queue/Qimage1.jpg">
+ 						<i class="fa-solid play-btn fa-play"></i>
+ 					</div>
+ 					<div class = "song-and-artist-container">
+ 						<p class = "queue-song-name">Kabhi alvida na kehna</p>
+ 						<p class = "queue-artist-name">Sonu Nigam</p>
+ 					</div>
+ 				</div>
+ 				<span class = "nav-link">
+ 				<i class="fa-regular fa-heart"></i></span>
+ 			</div>
+ 			<div class = "queue-element">
+ 				<div class = "song-image-container">
+ 					<!-- <p class = "queue-number">02</p> -->
+ 					<i class="fa-solid fa-bars-staggered"></i>
+ 					<div class = "image-container">
+ 						<img class = "queue-song-img" src = "assests/queue/Qimage2.jpg">
+ 						<i class="fa-solid play-btn fa-play"></i>
+ 					</div>
+ 					<div class = "song-and-artist-container">
+ 						<p class = "queue-song-name">O khuda</p>
+ 						<p class = "queue-artist-name">Amaal Malik</p>
+ 					</div>
+ 				</div>
+ 				<span class = "nav-link">
+ 				<i class="fa-regular fa-heart"></i>
+ 			</span>
+ 			</div>
+ 			<div class ="queue-element">
+ 				<div class = "song-image-container">
+ 					<p class = "queue-number">03</p>
+ 					<div class = "image-container">
+ 						<img class = "queue-song-img" src =  "assests/queue/Qimage3.jpg">
+ 						<i class="fa-solid play-btn fa-play"></i>
+ 					</div>
+ 					<div class = "song-and-artist-container">
+ 						<p class = "queue-song-name">Galat Fehmi</p>
+ 						<p class = "queue-artist-name">Asim Azhar</p>
+ 					</div>
+ 				</div>
+ 				<span class="nav-link">
+ 				<i class="fa-regular fa-heart"></i></span>
+ 			</div>
+ 			<div class ="queue-element">
+ 				<div class = "song-image-container">
+ 					<p class = "queue-number">04</p>
+ 					<div class = "image-container">
+ 						<img class = "queue-song-img" src =  "assests/queue/Qimage4.jpg">
+ 						<i class="fa-solid play-btn fa-play"></i>
+ 					</div>
+ 					<div class = "song-and-artist-container">
+ 						<p class = "queue-song-name">Malang</p>
+ 						<p class = "queue-artist-name">Ved Sharma</p>
+ 					</div>
+ 				</div>
+ 				<span class = "nav-link">
+ 				<i class="fa-regular fa-heart"></i></span>
+ 			</div>
+ 			<div class ="queue-element">
+ 				<div class = "song-image-container">
+ 					<p class = "queue-number">05</p>
+ 					<div class = "image-container">
+ 						<img class = "queue-song-img" src =  "assests/queue/Qimage5.jpg">
+ 						<i class="fa-solid play-btn fa-play"></i>
+ 					</div>
+ 					<div class = "song-and-artist-container">
+ 						<p class = "queue-song-name">Kuch toh hai</p>
+ 						<p class = "queue-artist-name">Armaan Malik</p>
+ 					</div>
+ 				</div>
+ 				<span class = "nav-link">
+ 				<i class="fa-regular fa-heart"></i>
+ 			</span>
+ 			</div>
+ 			<div class ="queue-element">
+ 				<div class = "song-image-container">
+ 					<p class = "queue-number">06</p>
+ 					<div class = "image-container">
+ 						<img class = "queue-song-img" src =  "assests/queue/Qimage6.jpg">
+ 						<i class="fa-solid play-btn fa-play"></i>
+ 					</div>
+ 					<div class = "song-and-artist-container">
+ 						<p class = "queue-song-name">Judaai</p>
+ 						<p class = "queue-artist-name">Arijit Singh</p>
+ 					</div>
+ 				</div>
+ 				<span class = "nav-link">
+ 				<i class="fa-regular fa-heart"></i>
+ 			</span>
+ 			</div>
+ 			<div class ="queue-element">
+ 				<div class = "song-image-container">
+ 					<p class = "queue-number">07</p>
+ 					<div class = "image-container">
+ 						<img class = "queue-song-img" src =  "assests/queue/Qimage7.jpg">
+ 						<i class="fa-solid play-btn fa-play"></i>
+ 					</div>
+ 					<div class = "song-and-artist-container">
+ 						<p class = "queue-song-name">Tu hai ki nahi</p>
+ 						<p class = "queue-artist-name">Ankit tiwari</p>
+ 					</div>
+ 				</div>
+ 				<span class = "nav-link">
+ 				<i class="fa-regular fa-heart"></i></span>
+ 			</div>
+ 			<div class ="queue-element">
+ 				<div class = "song-image-container">
+ 					<p class = "queue-number">08</p>
+ 					<div class = "image-container">
+ 						<img class = "queue-song-img" src =  "assests/queue/Qimage8.jpg">
+ 						<i class="fa-solid play-btn fa-play"></i>
+ 					</div>
+ 					<div class = "song-and-artist-container">
+ 						<p class = "queue-song-name">Kaash aisa hota hai</p>
+ 						<p class = "queue-artist-name">Darshan Rawal</p>
+ 					</div>
+ 				</div>
+ 				<span class = "nav-link">
+ 				<i class="fa-regular fa-heart"></i></span>
+ 			</div>
+ 			<div class ="queue-element">
+ 				<div class = "song-image-container">
+ 					<p class = "queue-number">09</p>
+ 					<div class = "image-container">
+ 						<img class = "queue-song-img" src =  "assests/queue/Qimage9.jpg">
+ 						<i class="fa-solid play-btn fa-play"></i>
+ 					</div>
+ 					<div class = "song-and-artist-container">
+ 						<p class = "queue-song-name">Baarish lete aana</p>
+ 						<p class = "queue-artist-name">Darshan Rawal</p>
+ 					</div>
+ 				</div>
+ 				<i class="fa-regular fa-heart"></i>
+ 			</div>
+ 			<div class ="queue-element">
+ 				<div class = "song-image-container">
+ 					<p class = "queue-number">10</p>
+ 					<div class = "image-container">
+ 						<img class = "queue-song-img" src =  "assests/queue/Qimage10.jpg">
+ 						<i class="fa-solid play-btn fa-play"></i>
+ 					</div>
+ 					<div class = "song-and-artist-container">
+ 						<p class = "queue-song-name">Baari</p>
+ 						<p class = "queue-artist-name">Bilal Saeed</p>
+ 					</div>
+ 				</div>
+ 				<span class = "nav-link">
+ 				<i class="fa-regular fa-heart"></i>
+ 			</span>
+ 			</div>
+ 			<div class ="queue-element">
+ 				<div class = "song-image-container">
+ 					<p class = "queue-number">11</p>
+ 					<div class = "image-container">
+ 						<img class = "queue-song-img" src =  "assests/queue/Qimage11.jpg">
+ 						<i class="fa-solid play-btn fa-play"></i>
+ 					</div>
+ 					<div class = "song-and-artist-container">
+ 						<p class = "queue-song-name">Mar Jaayein</p>
+ 						<p class = "queue-artist-name">Atif Aslam</p>
+ 					</div>
+ 				</div>
+ 				<span class = "nav-link">
+ 				<i class="fa-regular fa-heart"></i>
+ 			</span>
+ 			</div>
+ 			<!-- <div class ="queue-element">
+ 				<div class = "song-image-container">
+ 					<p class = "queue-number">12</p>
+ 					<div class = "image-container">
+ 						<img class = "queue-song-img" src =  "assests/queue/Qimage1.jpg">
+ 						<i class="fa-solid fa-play"></i>
+ 					</div>
+ 					<div class = "song-and-artist-container">
+ 						<p class = "queue-song-name">dariya</p>
+ 						<p class = "queue-artist-name">Arko Pravo Mukherjee</p>
+ 					</div>
+ 				</div>
+ 				<span class = "nav-link">
+ 				<i class="fa-light fa-heart"></i>
+ 			</span>
+ 			</div> -->
+ 		</div>
+ 	</div>
+ 	<!-- footer part of the webpage -->
+ 	<footer>
+ 		<div id = "footer-song-info">
+ 			<div id = "footer-song-imgage"></div>
+ 			<div id = "footer-song-name">
+ 				<span>O Khuda</span>
+ 				<span class = "subtitle">Amaal Malik</span>
+ 			</div>
+ 			<div>
+ 				<span class = "nav-link">
+ 					<i class="fa-regular fa-heart subtitle"></i>
+ 				</span>
+ 				<span class = "nav-link">
+ 					<i class="fa-solid fa-ban subtitle"></i>
+ 				</span>
+ 			</div>
+ 		</div>
+ 		<!-- contains Player control: Play, pause, Next,previous,shuffle and repeat with slider-->
+ 		<div id =  "player">
+ 			<div id = "player-control">
+ 				<div><i class="fa-solid fa-shuffle"></i></div>
+ 				<div><i class="fa-solid fa-backward-step"></i></div>
+ 				<div><i class="fa-solid fa-circle-pause" style = "font-size: 2rem;"></i></div>
+ 				<div><i class="fa-solid fa-forward-step"></i></div>
+ 				
+ 				<div><i class="fa-solid fa-rotate-right"></i></div>
+ 			</div>
+ 			<div id = "player-slider-container">
+ 				<div class = "subtitle">
+ 					0:00
+ 				</div>
+ 				<input type="range" min = "0" max = "100" value="25">
+ 				<div class = "subtitle">
+ 					4:44
+ 				</div>
+ 			</div>
+ 		</div>
+ 		<!-- volume,button,Expand button -->
+ 		<div class = "player-extras">
+ 			<div>
+ 				<i class="fa-solid fa-list"></i>
+ 			</div>
+ 			<div>
+ 				<i class="fa-solid fa-laptop"></i>
+ 			</div>
+ 			<div class = "volume-container">
+ 				<span><i class="fa-solid fa-volume-high"></i></span>
+ 				<input type = "range" min = "0" max = "100" value = "50" class = "slider" id = "volume-slider">
+ 			</div>
+ 			<div>
+ 				<i class="fa-solid fa-expand"></i>
+ 			</div>
+ 		</div>
+ 	</footer>
+ </div>
+
+ 
+
+</body>
+</html>
